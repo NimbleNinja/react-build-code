@@ -3,6 +3,8 @@ import './app.css'
 
 function App() {
   const [value, setValue] = useState(1)
+
+  console.log('hello from react')
   return (
     <div className="app">
       <h1 className="title">AuctionGate.io</h1>
