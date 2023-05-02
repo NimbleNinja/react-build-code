@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './app.css'
 
 function App() {
+  const [value, setValue] = useState(1)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1 className="title">AuctionGate.io</h1>
+      <h3>Simple example:</h3>
+      <p>VIN code: {value}</p>
+      <p>2HGFA16527H500037</p>
+      <button onClick={() => setValue(prev => prev + 1)}>click</button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
